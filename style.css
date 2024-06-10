@@ -83,10 +83,17 @@ ul {
     color: white;
 }
 
+
 ul li {
     border-bottom: 1px solid lightblue;
     padding: 1vw;
     font-size: 1.2rem;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 ul li:last-child {
@@ -101,4 +108,16 @@ ul li:hover {
     background-color: #ddd;
     transition: background-color 0.3s;
     color: black;
+}
+.checked{
+    text-decoration: line-through;
+}
+
+ul li.checked{
+    background-color: black;
+}
+
+ul li.checked:hover{
+    transition: all 100s ease-in-out;
+    cursor: pointer;
 }
