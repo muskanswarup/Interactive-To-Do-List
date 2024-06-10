@@ -109,13 +109,8 @@ ul li:hover {
     transition: background-color 0.3s;
     color: black;
 }
-.checked{
-    text-decoration: line-through;
-}
 
-ul li.checked{
-    background-color: black;
-}
+
 
 ul li.checked:hover{
     transition: all 100s ease-in-out;

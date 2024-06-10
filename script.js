@@ -36,12 +36,25 @@ addButton.addEventListener("click" , () => {
 
 
 
-listItems.forEach(item => {
-    // console.log(item.textContent);
+    listItems.forEach(item => {
 
-    let className = item.getAttribute("class");
-    if(className === "checked"){
-        console.log(item.textContent);
-    }
+        let className = item.getAttribute("class");
+        if(className === "checked"){
+            console.log(item.textContent);
+            item.style.textDecoration = "line-through";    
+            item.style.backgroundColor = "black";
+        }
 
-})
+        item.addEventListener("click" , () => {
+            // item.style.textDecoration = "none";
+
+            if(item.style.textDecoration === "line-through"){
+                item.style.textDecoration = "none";
+                item.style.backgroundColor = ""
+            }else{
+                item.style.textDecoration = "line-through";
+                item.style.backgroundColor = "black";
+                item.style.color = "white";
+            }
+        })
+    })
